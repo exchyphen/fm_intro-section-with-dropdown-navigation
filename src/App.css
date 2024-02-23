@@ -1,0 +1,271 @@
+main {
+  width: 100%;
+  background: var(--almost-white);
+  position: relative;
+}
+
+/* general */
+a, a:visited {
+  text-decoration: none;
+  color: var(--medium-gray);
+}
+
+a:hover {
+  cursor: pointer;
+  color: var(--almost-black);
+}
+
+/* nav */
+
+nav {
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left-container {
+  width: 600px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list-container {
+  width: 475px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown {
+  max-width: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.icon {
+  width: auto;
+  height: 0.5rem;
+}
+
+.logo-img {
+  position: relative;
+  top: 4px;
+}
+
+.nav-right-container {
+  width: 200px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon-menu:hover {
+  cursor: pointer;
+}
+
+.register-button {
+  border: 1px solid var(--medium-gray);
+  color: var(--medium-gray);
+  background: var(--almost-white);
+  padding: 10px 1rem;
+  border-radius: 10px;
+}
+
+.register-button:hover {
+  cursor: pointer;
+  border: 1px solid var(--almost-black);
+  color: var(--almost-black);
+}
+
+/* main */
+
+.main-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+  padding: 150px;
+}
+
+/* content */
+
+.content-container {
+  width: 500px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 3rem;
+}
+
+h1 {
+  font-size: 4.2rem;
+  font-weight: 700;
+  color: var(--almost-black);
+}
+
+p {
+  color: var(--medium-gray);
+  line-height: 1.5rem;
+}
+
+.learn-more-button {
+  width: 160px;
+  padding: 14px 1rem;
+  border-radius: 10px;
+  color: var(--almost-white);
+
+  border: 1px solid var(--almost-black);
+  background: var(--almost-black);
+}
+
+.learn-more-button:hover {
+  cursor: pointer;
+  background: var(--almost-white);
+  color: var(--almost-black);
+}
+
+.client-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+.client-img {
+  width: auto;
+  height: 1.2rem;
+}
+
+/* hero */
+
+.hero-img-container {
+  width: 500px;
+  height: 700px;
+  background-image: url("./assets/images/image-hero-desktop.png");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+
+.attribution a {
+  color: var(--almost-black);
+}
+
+.attribution a:hover {
+  color: var(--almost-white);
+}
+
+@media screen and (max-width: 1420px) {
+  .main-container {
+    gap: 60px;
+    padding: 150px 100px;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .nav-left-container {
+    width: 500px;
+  }
+
+  .nav-list-container {
+    width: 400px;
+  }
+
+  .main-container {
+    gap: 20px;
+    padding: 80px;
+  }
+
+  .content-container, .hero-img-container {
+    width: 300px;
+    height: 400px;
+  }
+
+  .content-container {
+    width: 500px;
+    height: auto;
+    justify-content: space-between;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .client-container {
+    margin-top: 0;
+  }
+
+  .hero-img-container {
+    background-size: 100% auto;
+  }
+}
+
+@media screen and (max-width: 985px) {
+  main {
+    min-width: 375px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav {
+    padding: 1rem;
+  }
+
+  /* note: nav-list-container is now in the modal menu */
+  .nav-list-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+
+
+  .main-container {
+    flex-direction: column-reverse;
+    gap: 1rem;
+    padding: 0;
+    padding-bottom: 50px;
+  }
+
+  .content-container {
+    width: 100%;
+    padding: 0 3rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .hero-img-container {
+    width: 100%;
+    height: 400px;
+    background-image: url("./assets/images/image-hero-mobile.png");
+    background-size: auto 100%;
+    background-position: center;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .content-container {
+    padding: 15px;
+  }
+
+  .hero-img-container {
+    height: 285px;
+  }
+
+  .client-img {
+    height: 1rem;
+  }
+}
